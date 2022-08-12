@@ -30,7 +30,7 @@ My research focus lies in computer graphics, 3D vision, especially human motion 
 
 
 # 🔥 News
-- *2022.02*: Our paper [Towards Accurate Active Camera Localization](https://arxiv.org/abs/2012.04263) was accepted by ECCV 2022.
+- *2022.07*: Our paper [Towards Accurate Active Camera Localization](https://arxiv.org/abs/2012.04263) was accepted by ECCV 2022.
 
 # 📝 Publications 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ECCV 2022</div><img src='./QihangFang_files/eccv_2022_localization.gif' alt="ActiveLocalization" width="100%"></div></div>
