@@ -17,28 +17,65 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+<p>
+  I am a master student at the <a 
+            href="http://irc.cs.sdu.edu.cn/">Interdisciplinary Research Center (IRC)</a>, <a 
+            href="https://www.sdu.edu.cn/">Shandong University</a>, where I am honored to be advised by <a 
+            href="https://cfcs.pku.edu.cn/baoquan/">Prof. Baoquan Chen</a>. I am also an intern at <a 
+            href="https://ai.tencent.com/">Tencent AI Lab</a> where I am advised by <a 
+            href="https://fqnchina.github.io/">Dr. Qingnan Fan</a>
+</p>
 
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
+My research focus lies in computer graphics, 3D vision, especially human motion animation and camera localization.
 
 
 # 🔥 News
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 
 # 📝 Publications 
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
-
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
-
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-</div>
-</div>
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+ <tr onmouseout="portrait_stop()" onmouseover="portrait_start()">
+   <td width="25%">
+     <div class="one">
+     <div class="two" id="portrait_image" style="opacity: 0;">
+     <img src="./QihangFang_files/eccv_2022_localization.gif" width="175" alt="" style="border-style: none" align="middle">
+     </div>
+     <script type="text/javascript">
+     function portrait_start() {
+     document.getElementById('portrait_image').style.opacity = "1";
+     }
+     function portrait_stop() {
+     document.getElementById('portrait_image').style.opacity = "0";
+     }
+     portrait_stop()
+     </script>
+   </td>
+   <td valign="top" width="75%">
+ <a href="./QihangFang_files/eccv_2022_localization.pdf">
+   <papertitle>Towards Accurate Active Camera Localization</papertitle>
+ </a>
+ <br>    
+ <strong>Qihang Fang*</strong>, 
+ <a href="https://yd-yin.github.io/">Yingda Yin*</a>, 
+ <a href="https://github.com/fqnchina/">Qingnan Fan</a>, 
+ <a href="https://fxia22.github.io/">Fei Xia</a>,
+ <a href="https://scholar.google.com/citations?user=vtZMhssAAAAJ&hl=en/">Siyan Dong</a>, 
+ Sheng Wang,
+ <a href="https://juewang725.github.io/">Jue Wang</a>,
+ <a href="http://geometry.stanford.edu/member/guibas/index.html" target="_blank">Leonidas Guibas</a>,
+ <a href="https://cfcs.pku.edu.cn/baoquan/">Baoquan Chen</a>.
+ <br>
+     <em>ECCV</em>, 2022</strong><br>
+     <a href="https://arxiv.org/abs/2012.04263" target="_blank">arXiv</a>
+     /
+     <a href="./QihangFang_files/eccv_2022_localization.bib">bibtex</a>
+     /
+     <a href="https://github.com/qhFang/AccurateACL">github</a>  
+     <p></p>
+     <p> In this work, we explicitly model the camera and scene uncertainty components to solve the problem of active camera localization by reinforcement learning. Our algorithm improves over the state-of-the-art Markov Localization based approaches by a large margin on the fine-scale camera pose accuracy.</p>
+   </td>
+ </tr>
+</table> -->
 
 - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
 
