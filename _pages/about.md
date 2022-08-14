@@ -48,7 +48,7 @@ Towards Accurate Active Camera Localization
 
 
 # 📖 Educations
-- 2020.09 - Present, Shandong University, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- 2020.09 - Present, Master student, Interdisciplinary Research Center (IRC), Shandong University. 
   - Advisor:  [Prof. Baoquan Chen](https://cfcs.pku.edu.cn/baoquan/)
 - 2016.09 - 2020.06, B.E., Computer science and technology, Shandong University. 
 
