@@ -54,4 +54,4 @@ Towards Accurate Active Camera Localization
 
 # 💻 Internships
 - 2021.07 - Present, Research intern in Tencent AI Lab.
-  - Collaborator:  [Qingnan Fan](https://fqnchina.github.io/),  [Jue Wang](https://juewang725.github.io/)
+  - Collaborator:  [Qingnan Fan](https://fqnchina.github.io/),  [Xuelin Chen](https://xuelin-chen.github.io/),  [Jue Wang](https://juewang725.github.io/)
