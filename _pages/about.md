@@ -21,11 +21,11 @@ redirect_from:
   I am a PhD student at the <a 
             href="https://datascience.hku.hk/">Institute of Data Science (IDS)</a>, <a 
             href="https://www.hku.hk/">The University of Hong Kong</a>, where I am honored to be advised by <a 
-            href="https://yanchaoyang.github.io/">Prof. Yanchao Yang and <a 
+            href="https://yanchaoyang.github.io/">Prof. Yanchao Yang</a> and <a 
             href="https://people.eecs.berkeley.edu/~yima/">Prof. Yi Ma</a>. I am also an intern at <a 
             href="https://about.meta.com/realitylabs/">Meta the Reality Lab</a> where I am advised by <a 
             href="https://scholar.google.com/citations?user=WbG27wQAAAAJ">Dr. Chengcheng Tang</a>. I got the Master degree from <a 
-            href="https://www.sdu.edu.cn/">Shandong University suprevised by <a 
+            href="https://www.sdu.edu.cn/">Shandong University</a> supervised by <a 
             href="https://cfcs.pku.edu.cn/baoquan/">Prof. Baoquan Chen</a>. 
   My research focus lies in computer graphics, 3D vision, especially human motion understanding.
 </p>
