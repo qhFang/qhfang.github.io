@@ -27,9 +27,9 @@ redirect_from:
             href="https://scholar.google.com/citations?user=WbG27wQAAAAJ">Dr. Chengcheng Tang</a>. I got the Master degree from <a 
             href="https://www.sdu.edu.cn/">Shandong University suprevised by <a 
             href="https://cfcs.pku.edu.cn/baoquan/">Prof. Baoquan Chen</a>. 
+  My research focus lies in computer graphics, 3D vision, especially human motion understanding.
 </p>
 
-My research focus lies in computer graphics, 3D vision, especially human motion understanding.
 
 
 # 🔥 News
