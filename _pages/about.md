@@ -75,7 +75,7 @@ Towards Accurate Active Camera Localization
 - 2016.09 - 2020.06, B.E., Computer science and technology, Shandong University. 
 
 # 💻 Internships
-- 2021.07 - 2023.04, Research intern in the Reality Lab.
+- 2024.10 - Present, Research intern in the Reality Lab.
   - Collaborator:  [Chengcheng Tang](https://scholar.google.com/citations?user=WbG27wQAAAAJ),  [Bugra Tekin](https://btekin.github.io/)
 - 2021.07 - 2023.04, Research intern in Tencent AI Lab.
   - Collaborator:  [Qingnan Fan](https://fqnchina.github.io/),  [Xuelin Chen](https://xuelin-chen.github.io/),  [Jue Wang](https://juewang725.github.io/)
