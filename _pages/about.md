@@ -33,7 +33,7 @@ redirect_from:
 
 
 # 🔥 News
-- *2024.09*: Our paper [CigTime: Corrective Instruction Generation Through Inverse Motion Editing](https://openreview.net/pdf?id=gktA1Qycj9) was accepted by ECCV 2022.
+- *2024.09*: Our paper [CigTime: Corrective Instruction Generation Through Inverse Motion Editing](https://openreview.net/pdf?id=gktA1Qycj9) was accepted by NeurIPS 2024.
 - *2022.07*: Our paper [Towards Accurate Active Camera Localization](https://arxiv.org/abs/2012.04263) was accepted by ECCV 2022.
 
 # 📝 Publications 
