@@ -33,11 +33,27 @@ redirect_from:
 
 
 # 🔥 News
-- *2024.09*: Our paper [CigTime: Corrective Instruction Generation Through Inverse Motion Editing](https://openreview.net/pdf?id=gktA1Qycj9) was accepted by NeurIPS 2024.
+- *2025.06*: Our paper [HuMoCon: Concept Discovery for Human Motion Understanding](https://qhfang.github.io/) was accepted by NeurIPS 2024.
+- *2024.09*: Our paper [CigTime: Corrective Instruction Generation Through Inverse Motion Editing](https://arxiv.org/abs/2412.05460) was accepted by NeurIPS 2024.
 - *2022.07*: Our paper [Towards Accurate Active Camera Localization](https://arxiv.org/abs/2012.04263) was accepted by ECCV 2022.
 
 # 📝 Publications 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2024</div><img src='../QihangFang_files/nips_2024_cigtime.gif' alt="ActiveLocalization" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2025</div><img src='../QihangFang_files/cvpr_2025_humocon.gif' alt="MotionUnderstanding" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+HuMoCon: Concept Discovery for Human Motion Understanding
+
+Qihang Fang, [Chengcheng Tang](https://scholar.google.com/citations?user=WbG27wQAAAAJ), [Bugra Tekin](https://btekin.github.io/), [Shugao Ma](https://shugaoma.github.io/), †[Yanchao Yang](https://yanchaoyang.github.io/)
+
+[project page](https://qhfang.github.io/) [paper](https://qhfang.github.io/)  [code](https://qhfang.github.io/) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+- In this work, we propose a novel framework that discovers human motion concepts by jointly aligning video and motion features to capture both contextual and fine-grained interactions, which addresses multi-modality alignment and temporal detail loss using feature alignment and velocity reconstruction, achieving superior performance on standard benchmarks.
+</div>
+</div>
+
+
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2024</div><img src='../QihangFang_files/nips_2024_cigtime.gif' alt="MotionCorrection" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 CigTime: Corrective Instruction Generation Through Inverse Motion Editing
@@ -75,7 +91,7 @@ Towards Accurate Active Camera Localization
 - 2016.09 - 2020.06, B.E., Computer science and technology, Shandong University. 
 
 # 💻 Internships
-- 2024.10 - Present, Research intern in the Reality Lab.
+- 2024.10 - 2025.03, Research intern in the Reality Lab.
   - Collaborator:  [Chengcheng Tang](https://scholar.google.com/citations?user=WbG27wQAAAAJ),  [Bugra Tekin](https://btekin.github.io/)
 - 2021.07 - 2023.04, Research intern in Tencent AI Lab.
   - Collaborator:  [Qingnan Fan](https://fqnchina.github.io/),  [Xuelin Chen](https://xuelin-chen.github.io/),  [Jue Wang](https://juewang725.github.io/)
