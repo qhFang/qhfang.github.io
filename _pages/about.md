@@ -33,7 +33,7 @@ redirect_from:
 
 
 # 🔥 News
-- *2025.06*: Our paper [HuMoCon: Concept Discovery for Human Motion Understanding](https://qhfang.github.io/) was accepted by NeurIPS 2024.
+- *2025.06*: Our paper [HuMoCon: Concept Discovery for Human Motion Understanding](https://arxiv.org/abs/2505.20920) was accepted by NeurIPS 2024.
 - *2024.09*: Our paper [CigTime: Corrective Instruction Generation Through Inverse Motion Editing](https://arxiv.org/abs/2412.05460) was accepted by NeurIPS 2024.
 - *2022.07*: Our paper [Towards Accurate Active Camera Localization](https://arxiv.org/abs/2012.04263) was accepted by ECCV 2022.
 
