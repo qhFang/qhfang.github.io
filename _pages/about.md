@@ -33,7 +33,7 @@ redirect_from:
 
 
 # 🔥 News
-- *2025.06*: Our paper [HuMoCon: Concept Discovery for Human Motion Understanding](https://arxiv.org/abs/2505.20920) was accepted by NeurIPS 2024.
+- *2025.06*: Our paper [HuMoCon: Concept Discovery for Human Motion Understanding](https://qhfang.github.io/papers/humocon.html) was accepted by NeurIPS 2024.
 - *2024.09*: Our paper [CigTime: Corrective Instruction Generation Through Inverse Motion Editing](https://arxiv.org/abs/2412.05460) was accepted by NeurIPS 2024.
 - *2022.07*: Our paper [Towards Accurate Active Camera Localization](https://arxiv.org/abs/2012.04263) was accepted by ECCV 2022.
 
@@ -45,7 +45,7 @@ HuMoCon: Concept Discovery for Human Motion Understanding
 
 Qihang Fang, [Chengcheng Tang](https://scholar.google.com/citations?user=WbG27wQAAAAJ), [Bugra Tekin](https://btekin.github.io/), [Shugao Ma](https://shugaoma.github.io/), †[Yanchao Yang](https://yanchaoyang.github.io/)
 
-[project page](https://qhfang.github.io/) [paper](https://arxiv.org/abs/2505.20920)  [code](https://qhfang.github.io/) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+[project page](https://qhfang.github.io/papers/humocon.html) [paper](https://arxiv.org/abs/2505.20920)  [code](https://github.com/qhFang/HuMoCon) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 - In this work, we propose a novel framework that discovers human motion concepts by jointly aligning video and motion features to capture both contextual and fine-grained interactions, which addresses multi-modality alignment and temporal detail loss using feature alignment and velocity reconstruction, achieving superior performance on standard benchmarks.
 </div>
 </div>

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HuMoCon: Concept Discovery for Human Motion Understanding</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: white;
+            padding: 60px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .authors {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .author-link {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .author-link:hover {
+            text-decoration: underline;
+        }
+
+        .affiliations {
+            font-size: 1rem;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 24px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        /* Main content */
+        .content {
+            background: white;
+            margin: 40px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .section {
+            padding: 50px 60px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .abstract-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #34495e;
+            text-align: justify;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Teaser image */
+        .teaser-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .teaser-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .placeholder-image {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin: 0 auto;
+        }
+
+        /* Video grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .video-item {
+            background: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .video-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-placeholder {
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 500;
+        }
+
+        .video-caption {
+            padding: 20px;
+            text-align: center;
+            font-size: 1rem;
+            color: #34495e;
+        }
+
+        /* Method section */
+        .method-diagram {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .method-placeholder {
+            width: 100%;
+            max-width: 1000px;
+            height: 500px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 2px dashed #ced4da;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-size: 1.1rem;
+            margin: 0 auto;
+        }
+
+        /* Results section */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .result-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            border-left: 4px solid #3498db;
+            transition: transform 0.3s ease;
+        }
+
+        .result-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .result-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+
+        .result-label {
+            font-size: 1.1rem;
+            color: #34495e;
+            font-weight: 500;
+        }
+
+        /* Citation */
+        .citation-box {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 30px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            overflow-x: auto;
+            margin: 30px 0;
+        }
+
+        /* Updates section */
+        .updates-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .update-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #27ae60;
+        }
+
+        .update-date {
+            font-weight: 600;
+            color: #27ae60;
+            margin-right: 15px;
+            min-width: 120px;
+        }
+
+        .update-content {
+            color: #34495e;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section {
+                padding: 30px 20px;
+            }
+            
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 200px;
+                justify-content: center;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1 class="title">HuMoCon</h1>
+            <p class="subtitle">Concept Discovery for Human Motion Understanding</p>
+            
+            <!-- TODO: 添加实际作者信息 - 参考MotionLLM格式 -->
+            <div class="authors">
+                <a href="https://qhfang.github.io/" class="author-link">Qihang Fang</a>1,
+                <a href="https://scholar.google.com/citations?user=WbG27wQAAAAJ" class="author-link">Chengcheng Tang</a> 2,
+                <a href="https://btekin.github.io/" class="author-link">Bugra Tekin</a> 2,
+                <a href="https://shugaoma.github.io/" class="author-link">Shugao Ma</a> 2,
+                <a href="https://yanchaoyang.github.io/" class="author-link">Yanchao Yang</a>🤗 1<br>
+                🤗Corresponding author.
+            </div>
+            
+
+            <!-- TODO: 添加实际机构信息 -->
+            <div class="affiliations">
+                1 The University of Hong Kong, 2 Meta
+            </div>
+
+            <div class="buttons">
+                <a href="https://arxiv.org/pdf/2505.20920" class="btn" target="_blank">
+                    📄 Paper
+                </a>
+                <!-- TODO: 添加实际链接 -->
+                <a href="#" class="btn">
+                    💻 Code (Coming Soon)
+                </a>
+                <a href="#" class="btn">
+                    🤗 HuggingFace (Coming Soon)
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+
+            <!-- Abstract Section -->
+            <div class="section fade-in">
+                <h2 class="section-title">Abstract</h2>
+                <!-- TODO: 从论文中提取完整摘要 -->
+                <p class="abstract-text">
+                    This study delves into the realm of concept discovery for human motion understanding by leveraging advanced machine learning techniques. 
+                    Diverging from previous approaches that focus on low-level motion features, we argue that understanding human behavior necessitates 
+                    discovering high-level semantic concepts that bridge the gap between raw motion data and human-interpretable meanings. 
+                    In light of this, we present HuMoCon, a novel framework for concept discovery in human motion understanding that effectively 
+                    captures nuanced movement patterns and their semantic relationships. Our approach demonstrates significant improvements over 
+                    state-of-the-art methods through comprehensive experiments on multiple benchmarks, showcasing the effectiveness of our 
+                    concept-driven approach for human motion analysis and understanding.
+                </p>
+            </div>
+
+            <!-- Teaser Section -->
+            <div class="section fade-in">
+                <h2 class="section-title">Overview</h2>
+                <div class="teaser-container">
+                    <figure class="teaser-figure">
+                    <img src="{{ '/images/humocon-teaser.png' | relative_url }}"
+                        alt="HuMoCon 框架概览图"
+                        class="teaser-image"
+                        loading="lazy">
+                    <figcaption>🎯 HuMoCon Framework Overview</figcaption>
+                    </figure>
+                </div>
+                <p class="abstract-text">
+                    <!-- TODO: 添加方法概述 -->
+                    HuMoCon introduces a novel approach to human motion understanding through automated concept discovery. 
+                    Our framework identifies meaningful motion concepts and their relationships, enabling more interpretable 
+                    and effective human behavior analysis.
+                </p>
+            </div>
+
+            <!-- Method Section -->
+            <div class="section fade-in">
+                <h2 class="section-title">Method</h2>
+                <div class="teaser-container">
+                    <figure class="teaser-figure">
+                    <img src="{{ '/images/humocon-pipeline.png' | relative_url }}"
+                        alt="HuMoCon 方法概述"
+                        class="teaser-image"
+                        loading="lazy">
+                    <figcaption>🏗️ HuMoCon Architecture</figcaption>
+                    </figure>
+                </div>
+                <p class="abstract-text">
+                    <!-- TODO: 添加方法描述 -->
+                    Our method consists of three main components: (1) Motion Encoder that processes raw motion sequences, 
+                    (2) Concept Discovery Module that identifies semantic concepts from motion patterns, and 
+                    (3) Concept Reasoning Module that establishes relationships between discovered concepts for comprehensive understanding.
+                </p>
+            </div>
+
+
+            <!-- Citation Section -->
+            <div class="section fade-in">
+                <h2 class="section-title">Citation</h2>
+                <div class="citation-box">
+                    <!-- TODO: 更新实际引用信息 -->
+@article{humocon2024,
+    title={HuMoCon: Concept Discovery for Human Motion Understanding},
+    author={Qihang Fang, Chengcheng Tang, Bugra Tekin, Shugao Ma, Yanchao Yang},
+    booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+    year={2024}
+}
+                </div>
+            </div>
+
+            <!-- Acknowledgments Section -->
+            <div class="section fade-in">
+                <h2 class="section-title">Acknowledgments</h2>
+                <p class="abstract-text">
+                    <!-- TODO: 添加致谢信息 -->
+                    This work is supported by the Early Career Scheme of the Research Grants Council (grant \# 27207224), the HKU-100 Award, a donation from the Musketeers Foundation, and an Academic Gift from Meta. The data collection and processing and model developing was done at the the the University of Hong Kong.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth button animations
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                // Create ripple effect
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.cssText = `
+                    position: absolute;
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${x}px;
+                    top: ${y}px;
+                    background: rgba(255, 255, 255, 0.3);
+                    border-radius: 50%;
+                    transform: scale(0);
+                    animation: ripple 0.6s linear;
+                    pointer-events: none;
+                `;
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Add ripple animation CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+            .btn {
+                position: relative;
+                overflow: hidden;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
