@@ -162,97 +162,20 @@
             margin: 0 auto;
         }
 
-        /* Video grid */
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-
-        .video-item {
-            background: #f8f9fa;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .video-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .video-placeholder {
-            aspect-ratio: 16/9;
-            background: linear-gradient(135deg, #3498db, #2980b9);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 500;
-        }
-
-        .video-caption {
-            padding: 20px;
-            text-align: center;
-            font-size: 1rem;
-            color: #34495e;
-        }
-
-        /* Method section */
-        .method-diagram {
-            text-align: center;
-            margin: 40px 0;
-        }
-
-        .method-placeholder {
+        /* Results Tables */
+        .results-table {
             width: 100%;
-            max-width: 1000px;
-            height: 500px;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border: 2px dashed #ced4da;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #6c757d;
-            font-size: 1.1rem;
-            margin: 0 auto;
+            border-collapse: collapse;
+            margin: 20px 0;
         }
-
-        /* Results section */
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin: 40px 0;
-        }
-
-        .result-card {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 10px;
+        .results-table th, .results-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
             text-align: center;
-            border-left: 4px solid #3498db;
-            transition: transform 0.3s ease;
         }
-
-        .result-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-
-        .result-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #3498db;
-            margin-bottom: 10px;
-        }
-
-        .result-label {
-            font-size: 1.1rem;
-            color: #34495e;
-            font-weight: 500;
+        .results-table th {
+            background-color: #3498db;
+            color: white;
         }
 
         /* Citation */
@@ -266,33 +189,6 @@
             line-height: 1.6;
             overflow-x: auto;
             margin: 30px 0;
-        }
-
-        /* Updates section */
-        .updates-list {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .update-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            border-left: 4px solid #27ae60;
-        }
-
-        .update-date {
-            font-weight: 600;
-            color: #27ae60;
-            margin-right: 15px;
-            min-width: 120px;
-        }
-
-        .update-content {
-            color: #34495e;
         }
 
         /* Responsive design */
@@ -344,18 +240,15 @@
             <h1 class="title">HuMoCon</h1>
             <p class="subtitle">Concept Discovery for Human Motion Understanding</p>
             
-            <!-- TODO: 添加实际作者信息 - 参考MotionLLM格式 -->
             <div class="authors">
                 <a href="https://qhfang.github.io/" class="author-link">Qihang Fang</a><sup>1</sup>,
                 <a href="https://scholar.google.com/citations?user=WbG27wQAAAAJ" class="author-link">Chengcheng Tang</a><sup>2</sup>,
                 <a href="https://btekin.github.io/" class="author-link">Bugra Tekin</a><sup>2</sup>,
                 <a href="https://shugaoma.github.io/" class="author-link">Shugao Ma</a><sup>2</sup>,
-                <a href="https://yanchaoyang.github.io/" class="author-link">Yanchao Yang</a><sup>🤗 1</sup><br>
-                🤗Corresponding author.
+                <a href="https://yanchaoyang.github.io/" class="author-link">Yanchao Yang</a><sup>1</sup><br>
+                Corresponding author.
             </div>
-            
 
-            <!-- TODO: 添加实际机构信息 -->
             <div class="affiliations">
                 1 The University of Hong Kong, 2 Meta
             </div>
@@ -364,12 +257,11 @@
                 <a href="https://arxiv.org/pdf/2505.20920" class="btn" target="_blank">
                     📄 Paper
                 </a>
-                <!-- TODO: 添加实际链接 -->
                 <a href="#" class="btn">
                     💻 Code
                 </a>
-                <a href="#" class="btn">
-                    🤗 HuggingFace
+                <a href="https://huggingface.co/spaces/qihfang/SportsCoaching" class="btn">
+                    🤗 Demo
                 </a>
             </div>
         </div>
@@ -381,35 +273,22 @@
             <!-- Abstract Section -->
             <div class="section fade-in">
                 <h2 class="section-title">Abstract</h2>
-                <!-- TODO: 从论文中提取完整摘要 -->
                 <p class="abstract-text">
-                    This study delves into the realm of concept discovery for human motion understanding by leveraging advanced machine learning techniques. 
-                    Diverging from previous approaches that focus on low-level motion features, we argue that understanding human behavior necessitates 
-                    discovering high-level semantic concepts that bridge the gap between raw motion data and human-interpretable meanings. 
-                    In light of this, we present HuMoCon, a novel framework for concept discovery in human motion understanding that effectively 
-                    captures nuanced movement patterns and their semantic relationships. Our approach demonstrates significant improvements over 
-                    state-of-the-art methods through comprehensive experiments on multiple benchmarks, showcasing the effectiveness of our 
-                    concept-driven approach for human motion analysis and understanding.
+                    We present HuMoCon, a novel motion-video understanding framework designed for advanced human behavior analysis. The core of our method is a human motion concept discovery framework that efficiently trains multi-modal encoders to extract semantically meaningful and generalizable features. HuMoCon addresses key challenges in motion concept discovery, including explicit cross-modal feature alignment and preserving high-frequency information via velocity reconstruction. Comprehensive experiments on standard benchmarks demonstrate that HuMoCon significantly outperforms state-of-the-art methods in human motion understanding. <!-- fileciteturn1file1 fileciteturn1file0 -->
                 </p>
             </div>
 
-            <!-- Teaser Section -->
+            <!-- Overview Section -->
             <div class="section fade-in">
                 <h2 class="section-title">Overview</h2>
                 <div class="teaser-container">
                     <figure class="teaser-figure">
-                    <img src="/images/humocon-teaser.png"
-                        alt="HuMoCon teaser"
-                        class="teaser-image"
-                        loading="lazy">
-                    <figcaption>🎯 HuMoCon Framework Overview</figcaption>
+                        <img src="/images/humocon-teaser.png" alt="HuMoCon teaser" class="teaser-image" loading="lazy">
+                        <figcaption>🎯 HuMoCon Framework Overview</figcaption>
                     </figure>
                 </div>
                 <p class="abstract-text">
-                    <!-- TODO: 添加方法概述 -->
-                    HuMoCon introduces a novel approach to human motion understanding through automated concept discovery. 
-                    Our framework identifies meaningful motion concepts and their relationships, enabling more interpretable 
-                    and effective human behavior analysis.
+                    HuMoCon introduces a novel approach to human motion understanding through automated concept discovery. Our framework identifies meaningful motion concepts and their relationships, enabling more interpretable and effective human behavior analysis.
                 </p>
             </div>
 
@@ -418,32 +297,108 @@
                 <h2 class="section-title">Method</h2>
                 <div class="teaser-container">
                     <figure class="teaser-figure">
-                    <img src="/images/humocon-pipeline.png"
-                        alt="HuMoCon overview"
-                        class="teaser-image"
-                        loading="lazy">
-                    <figcaption>🏗️ HuMoCon Architecture</figcaption>
+                        <img src="/images/humocon-pipeline.png" alt="HuMoCon overview" class="teaser-image" loading="lazy">
+                        <figcaption>🏗️ HuMoCon Architecture</figcaption>
                     </figure>
                 </div>
                 <p class="abstract-text">
-                    <!-- TODO: 添加方法描述 -->
-                    Our method consists of three main components: (1) Motion Encoder that processes raw motion sequences, 
-                    (2) Concept Discovery Module that identifies semantic concepts from motion patterns, and 
-                    (3) Concept Reasoning Module that establishes relationships between discovered concepts for comprehensive understanding.
+                    Our method consists of three main components: (1) Motion Encoder that processes raw motion sequences, (2) Concept Discovery Module that identifies semantic concepts via VQ-VAE-based discretization with masked and velocity reconstruction objectives, and (3) Concept Reasoning Module that establishes relationships between discovered concepts for comprehensive understanding. We explicitly align video and motion features during encoder pre-training and leverage LLM fine-tuning for downstream motion-video question answering tasks.
                 </p>
             </div>
 
+            <!-- Experiments Section -->
+            <div class="section fade-in">
+                <h2 class="section-title">Experiments</h2>
+                <!-- Quantitative Results: BABEL-QA -->
+                <h3>Quantitative Results</h3>
+                <h4>BABEL-QA Benchmark</h4>
+                <!-- Table from paper Table 1: Comparison on BABEL-QA -->
+                <table class="results-table">
+                    <thead>
+                        <tr>
+                            <th>Model</th><th>Pred type</th><th>Overall</th><th>Action</th><th>Direction</th><th>BodyPart</th><th>Before</th><th>After</th><th>Other</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>2s-AGCN-M</td><td>cls.</td><td>0.355</td><td>0.384</td><td>0.352</td><td>0.228</td><td>0.331</td><td>0.264</td><td>0.295</td></tr>
+                        <tr><td>2s-AGCN-R</td><td>cls.</td><td>0.357</td><td>0.396</td><td>0.352</td><td>0.194</td><td>0.337</td><td>0.301</td><td>0.285</td></tr>
+                        <tr><td>MotionCLIP-M</td><td>cls.</td><td>0.430</td><td>0.485</td><td>0.361</td><td>0.272</td><td>0.372</td><td>0.321</td><td>0.404</td></tr>
+                        <tr><td>MotionCLIP-R</td><td>cls.</td><td>0.420</td><td>0.489</td><td>0.310</td><td>0.250</td><td>0.398</td><td>0.314</td><td>0.387</td></tr>
+                        <tr><td>MotionLLM</td><td>gen.</td><td>0.436</td><td>0.517</td><td>0.354</td><td>0.154</td><td>0.427</td><td>0.368</td><td>0.529</td></tr>
+                        <tr><td>Ours</td><td>gen.</td><td>0.711</td><td>0.809</td><td>0.697</td><td>0.623</td><td>0.707</td><td>0.635</td><td>0.797</td></tr>
+                    </tbody>
+                </table>
+                <p class="abstract-text">
+                    Our method outperforms baselines by a large margin on the BABEL-QA test set, achieving 0.711 overall accuracy compared to 0.436 by MotionLLM, with notable gains in BodyPart queries (0.623 vs. 0.154) fileciteturn1file1.
+                </p>
+
+                <h4>ActivityNet-QA Benchmark</h4>
+                <!-- Table from paper Table 2: ActivityNet-QA results -->
+                <table class="results-table">
+                    <thead>
+                        <tr><th>Model</th><th>Acc↑</th><th>Score↑</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>FrozenBiLM</td><td>24.7</td><td>-</td></tr>
+                        <tr><td>VideoChat</td><td>-</td><td>2.2</td></tr>
+                        <tr><td>LLaMA-Adapter</td><td>34.2</td><td>2.7</td></tr>
+                        <tr><td>Video-LLaMA</td><td>12.4</td><td>1.1</td></tr>
+                        <tr><td>Video-ChatGPT</td><td>35.2</td><td>2.7</td></tr>
+                        <tr><td>Video-LLaVA</td><td>45.3</td><td>3.3</td></tr>
+                        <tr><td>VideoChat2</td><td>49.1</td><td>3.3</td></tr>
+                        <tr><td>MotionLLM</td><td>53.3</td><td>3.5</td></tr>
+                        <tr><td>Ours</td><td>54.2</td><td>3.6</td></tr>
+                    </tbody>
+                </table>
+                <p class="abstract-text">
+                    On ActivityNet-QA, HuMoCon achieves 54.2% accuracy and a score of 3.6, outperforming previous methods including MotionLLM (53.3%, 3.5) fileciteturn1file6.
+                </p>
+
+                <!-- Ablation Study -->
+                <h3>Ablation Study</h3>
+                <h4>BABEL-QA Ablation</h4>
+                <!-- Table from paper Table 3: Ablation on BABEL-QA -->
+                <table class="results-table">
+                    <thead>
+                        <tr>
+                            <th>Model</th><th>Pred type</th><th>Overall</th><th>Action</th><th>Direction</th><th>BodyPart</th><th>Before</th><th>After</th><th>Other</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>MotionLLM</td><td>gen.</td><td>0.436</td><td>0.517</td><td>0.354</td><td>0.154</td><td>0.427</td><td>0.368</td><td>0.529</td></tr>
+                        <tr><td>Ours-w/oLrec</td><td>gen.</td><td>0.696</td><td>0.741</td><td>0.645</td><td>0.577</td><td>0.600</td><td>0.597</td><td>0.762</td></tr>
+                        <tr><td>Ours-w/oLdis&Lact</td><td>gen.</td><td>0.637</td><td>0.693</td><td>0.478</td><td>0.606</td><td>0.667</td><td>0.526</td><td>0.709</td></tr>
+                        <tr><td>Ours-w/oLalign</td><td>gen.</td><td>0.675</td><td>0.743</td><td>0.579</td><td>0.523</td><td>0.584</td><td>0.570</td><td>0.743</td></tr>
+                        <tr><td>Ours</td><td>gen.</td><td>0.711</td><td>0.809</td><td>0.697</td><td>0.623</td><td>0.707</td><td>0.635</td><td>0.797</td></tr>
+                    </tbody>
+                </table>
+                <p class="abstract-text">
+                    Ablation confirms that velocity reconstruction and feature alignment are critical for performance; removing these modules degrades results significantly fileciteturn1file6.
+                </p>
+
+
+                <!-- Qualitative Examples -->
+                <h3>Qualitative Results</h3>
+                <div class="teaser-container">
+                    <figure class="teaser-figure">
+                        <img src="/images/motionvis_page1_200dpi.png" alt="HuMoCon overview" class="teaser-image" loading="lazy">
+                        <figcaption>Example Q&A results demonstrate detailed motion understanding</figcaption>
+                    </figure>
+                </div>
+                <p class="abstract-text">
+                    Example Q&A results demonstrate detailed motion understanding, e.g., answering kinematic and contextual questions such as muscle engagement during push-ups and phase descriptions in jump sequences, showing HuMoCon’s capability to reason about motion sequences fileciteturn1file6.
+                </p>
+            </div>
 
             <!-- Citation Section -->
             <div class="section fade-in">
                 <h2 class="section-title">Citation</h2>
                 <div class="citation-box">
-                    <!-- TODO: 更新实际引用信息 -->
-@article{humocon2024,
-    title={HuMoCon: Concept Discovery for Human Motion Understanding},
-    author={Qihang Fang, Chengcheng Tang, Bugra Tekin, Shugao Ma, Yanchao Yang},
-    booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-    year={2024}
+@inproceedings{Fang2025HuMoCon,
+  title={HuMoCon: Concept Discovery for Human Motion Understanding},
+  author={Qihang Fang and Chengcheng Tang and Bugra Tekin and Shugao Ma and Yanchao Yang},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2025}
 }
                 </div>
             </div>
@@ -452,8 +407,7 @@
             <div class="section fade-in">
                 <h2 class="section-title">Acknowledgments</h2>
                 <p class="abstract-text">
-                    <!-- TODO: 添加致谢信息 -->
-                    This work is supported by the Early Career Scheme of the Research Grants Council (grant \# 27207224), the HKU-100 Award, a donation from the Musketeers Foundation, and an Academic Gift from Meta. The data collection and processing and model developing was done at the the the University of Hong Kong.
+                    This work is supported by the Early Career Scheme of the Research Grants Council (grant #27207224), the HKU-100 Award, a donation from the Musketeers Foundation, and an Academic Gift from Meta. Data collection, processing, and model development were conducted at The University of Hong Kong.
                 </p>
             </div>
         </div>
@@ -474,21 +428,17 @@
             });
         }, observerOptions);
 
-        // Observe all fade-in elements
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
         });
 
-        // Smooth button animations
         document.querySelectorAll('.btn').forEach(btn => {
             btn.addEventListener('click', function(e) {
-                // Create ripple effect
                 const ripple = document.createElement('span');
                 const rect = this.getBoundingClientRect();
                 const size = Math.max(rect.width, rect.height);
                 const x = e.clientX - rect.left - size / 2;
                 const y = e.clientY - rect.top - size / 2;
-                
                 ripple.style.cssText = `
                     position: absolute;
                     width: ${size}px;
@@ -501,28 +451,15 @@
                     animation: ripple 0.6s linear;
                     pointer-events: none;
                 `;
-                
                 this.appendChild(ripple);
-                
-                setTimeout(() => {
-                    ripple.remove();
-                }, 600);
+                setTimeout(() => { ripple.remove(); }, 600);
             });
         });
 
-        // Add ripple animation CSS
         const style = document.createElement('style');
         style.textContent = `
-            @keyframes ripple {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
-            }
-            .btn {
-                position: relative;
-                overflow: hidden;
-            }
+            @keyframes ripple { to { transform: scale(4); opacity: 0; } }
+            .btn { position: relative; overflow: hidden; }
         `;
         document.head.appendChild(style);
     </script>
