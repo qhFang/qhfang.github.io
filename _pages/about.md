@@ -22,9 +22,9 @@ redirect_from:
             href="https://datascience.hku.hk/">Institute of Data Science (IDS)</a>, <a 
             href="https://www.hku.hk/">The University of Hong Kong</a>, where I am honored to be advised by <a 
             href="https://yanchaoyang.github.io/">Prof. Yanchao Yang</a> and <a 
-            href="https://people.eecs.berkeley.edu/~yima/">Prof. Yi Ma</a>. I am also an intern at <a 
-            href="https://about.meta.com/realitylabs/">Meta the Reality Lab</a> where I am advised by <a 
-            href="https://scholar.google.com/citations?user=WbG27wQAAAAJ">Dr. Chengcheng Tang</a>. I got the Master degree from <a 
+            href="https://people.eecs.berkeley.edu/~yima/">Prof. Yi Ma</a>. I am currently a research intern at <a
+            href="https://about.meta.com/">Meta</a>, collaborating with <a
+            href="https://abhaymittal.com/">Abhay Mittal</a> (August 2026 - January 2027). I got the Master degree from <a
             href="https://www.sdu.edu.cn/">Shandong University</a> supervised by <a 
             href="https://cfcs.pku.edu.cn/baoquan/">Prof. Baoquan Chen</a>. 
   My research focus lies in computer graphics, 3D vision, especially human motion understanding.
@@ -91,7 +91,9 @@ Towards Accurate Active Camera Localization
 - 2016.09 - 2020.06, B.E., Computer science and technology, Shandong University. 
 
 # 💻 Internships
-- 2024.10 - 2025.03, Research intern in the Reality Lab.
+- 2026.08 - 2027.01 (expected), Research intern at Meta.
+  - Collaborator: [Abhay Mittal](https://abhaymittal.com/)
+- 2024.10 - 2025.03, Research intern at Meta Reality Labs.
   - Collaborator:  [Chengcheng Tang](https://scholar.google.com/citations?user=WbG27wQAAAAJ),  [Bugra Tekin](https://btekin.github.io/)
 - 2021.07 - 2023.04, Research intern in Tencent AI Lab.
   - Collaborator:  [Qingnan Fan](https://fqnchina.github.io/),  [Xuelin Chen](https://xuelin-chen.github.io/),  [Jue Wang](https://juewang725.github.io/)
